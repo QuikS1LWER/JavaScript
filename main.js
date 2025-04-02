@@ -1,5 +1,13 @@
-let userName = 'Tarik';
-let userAge = 32;
-let userHight = 175;
-console.log(userName + ' is ' + userAge + ' years old and ' + userHight  ' hight');
-console.log(userName);
+function calc(operation, a, b) {
+  switch(operation) {
+    case "add":
+      return a + b;
+    case "multi":
+      return a * b;
+    case "subtract":
+      return a - b;
+    default:
+      return "error"
+  }
+}
+console.log(calc("add", 7, 5))
