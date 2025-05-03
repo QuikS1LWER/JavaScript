@@ -1,10 +1,22 @@
-// const phoneBook = {
-//   "Valera": 23642369,
-//   "Inga": 459845798,
-//   "Venik": 345543553,
-//   "Egor": 4345345355,
-//   "Lida": 3453453535
-// };
+const phoneBook = {
+  list: {
+  "Valera": 23642369,
+  "Inga": 459845798,
+  "Venik": 345543553,
+  "Egor": 4345345355,
+  "Lida": 3453453535
+},
+add(name, number) {
+  this.list[name] = number;
+},
+del(name) {
+  delete this.list[name];
+}
+}
+
+phoneBook.add("Oscar", 123123123);
+phoneBook.del("Venik");
+console.log(phoneBook.list);
 
 // const copyPhoneBook = phoneBook;
 
@@ -14,14 +26,14 @@
 
 // console.log(copyPhoneBook);
 
-const studentGrades = {
-  grades: {
-    "Alice": 90,
-    "Bob": 75
-  },
-  showGrade(name) {
-    console.log(name + "'s grade is " + this.grades[name])// выведи в консоль, например: "Alice's grade is 90"
-  }
-};
+// const studentGrades = {
+//   grades: {
+//     "Alice": 90,
+//     "Bob": 75
+//   },
+//   showGrade(name) {
+//     console.log(name + "'s grade is " + this.grades[name])// выведи в консоль, например: "Alice's grade is 90"
+//   }
+// };
 
-studentGrades.showGrade("Alice")
+// studentGrades.showGrade("Alice")
