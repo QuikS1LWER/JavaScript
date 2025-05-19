@@ -1,14 +1,16 @@
 const todo = {
   list: {"create a new practice task": "In Progress", "make a bed": "Done","write a post": "To Do",},
   showList() {
-    console.log(this.list);
+    for (const task in this.list) {
+      console.log(task + " - " + this.list[task]);
+    }
   },
   deleteTask(task) {
     delete this.list[task];
   },
   changeStatus(task, status) {
     if (!(task in this.list)) {
-      console.log("task not exist")
+      console.log("This task isn`t exist")
     } else {
       this.list[task] = status;
     };
@@ -24,7 +26,7 @@ const todo = {
   }
 };
 
-todo.addTask("pak staf");
+todo.addTask("pak staff");
 todo.changeStatus("write a post", "Done");
 todo.deleteTask("make a bed");
 todo.showList();
