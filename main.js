@@ -6,17 +6,26 @@ const phoneBook = {
   "Egor": 4345345355,
   "Lida": 3453453535
 },
-add(name, number) {
-  this.list[name] = number;
-},
-del(name) {
-  delete this.list[name];
-}
+
+// add(name, number) {
+//   this.list[name] = number;
+// },
+// del(name) {
+//   delete this.list[name];
+// }
 }
 
-phoneBook.add("Oscar", 123123123);
-phoneBook.del("Venik");
-console.log(phoneBook.list);
+for (const name in phoneBook.list) {
+  console.log(name + ' - ' + phoneBook.list[name]);
+}
+
+// const copyPB = structuredClone(phoneBook);
+// phoneBook.list = "empty";
+// console.log(copyPB.list);
+
+// phoneBook.add("Oscar", 123123123);
+// phoneBook.del("Venik");
+// console.log(phoneBook.list);
 
 // const copyPhoneBook = phoneBook;
 
@@ -37,3 +46,4 @@ console.log(phoneBook.list);
 // };
 
 // studentGrades.showGrade("Alice")
+
